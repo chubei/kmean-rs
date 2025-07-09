@@ -179,7 +179,7 @@ where
     /// - **sample_cnt**: Amount of samples, contained in the passed **samples** vector
     /// - **sample_dims**: Amount of dimensions each sample from the **sample** vector has
     /// - **distance_fn**: Distance function to use for the calculation
-    pub fn new(samples: &Vec<T>, sample_cnt: usize, sample_dims: usize, distance_fn: D) -> Self {
+    pub fn new(samples: &[T], sample_cnt: usize, sample_dims: usize, distance_fn: D) -> Self {
         assert!(samples.len() == sample_cnt * sample_dims);
 
         Self {
